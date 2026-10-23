@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.error {
+  background: $color-error-bg;
+  border: 1px solid $color-error;
+  border-radius: $radius;
+  color: $color-error;
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  padding: $space-3;
+
+  @include up($bp-md) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

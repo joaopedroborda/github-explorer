@@ -1,0 +1,55 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.profile {
+  align-items: center;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  padding: $space-4;
+  text-align: center;
+
+  @include up($bp-md) {
+    align-items: flex-start;
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.bio {
+  max-width: 60ch;
+}
+
+.location {
+  color: $color-text-muted;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2 $space-4;
+  justify-content: center;
+
+  @include up($bp-md) {
+    justify-content: flex-start;
+  }
+}

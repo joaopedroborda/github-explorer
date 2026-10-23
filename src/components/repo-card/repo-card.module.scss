@@ -1,0 +1,46 @@
+@use '../../styles/variables' as *;
+
+.card {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: $space-2;
+  padding: $space-3;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+  }
+}
+
+.title {
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+
+.description {
+  -webkit-box-orient: vertical;
+  color: $color-text-muted;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.meta {
+  color: $color-text-muted;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  gap: $space-1 $space-3;
+  margin-top: auto;
+}
+
+.language {
+  color: $color-text;
+  font-weight: 600;
+}

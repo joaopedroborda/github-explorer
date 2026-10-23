@@ -1,0 +1,13 @@
+@use '../../styles/variables' as *;
+
+.nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  justify-content: center;
+}
+
+.info {
+  color: $color-text-muted;
+}

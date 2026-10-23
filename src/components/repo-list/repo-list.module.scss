@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.list {
+  display: grid;
+  gap: $space-3;
+  grid-template-columns: 1fr;
+
+  @include up($bp-md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.item {
+  display: flex;
+}
+
+.empty {
+  background: $color-surface;
+  border: 1px dashed $color-border;
+  border-radius: $radius;
+  color: $color-text-muted;
+  padding: $space-5 $space-3;
+  text-align: center;
+}

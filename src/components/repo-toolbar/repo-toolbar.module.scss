@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.toolbar {
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  display: grid;
+  gap: $space-3;
+  grid-template-columns: 1fr;
+  padding: $space-3;
+
+  @include up($bp-md) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include up($bp-lg) {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}

@@ -1,0 +1,40 @@
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  margin: 0 auto;
+  max-width: $container-width;
+  padding: $space-4 $space-3;
+
+  @include up($bp-md) {
+    padding: $space-5 $space-4;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+
+  @include up($bp-md) {
+    font-size: 2.25rem;
+  }
+}
+
+.error {
+  background: $color-error-bg;
+  border: 1px solid $color-error;
+  border-radius: $radius;
+  color: $color-error;
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  padding: $space-3;
+
+  @include up($bp-md) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
